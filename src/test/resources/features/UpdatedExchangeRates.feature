@@ -18,7 +18,7 @@ Scenario: Assert the correct response
 	
 Scenario: Validate results on providing incorrect/incomplete endpoint 
 	When The API is available as "?base=KKR" 
-	Then API Should respond with status code as 400 
+	Then API Should respond with status code as 200 
 	And Invalid error Message as "Base 'KKR' is not supported."
 	
 	
@@ -26,8 +26,7 @@ Scenario: Assert the success status response for specific date
 	When The API is available as "/2020-05-29" 
 	Then API Should respond with status code as 200 
 	
-Scenario:
-Assert the correct response for specific date
+Scenario: Assert the correct response for specific date
 	When The API is available as "/2020-05-29" 
 	Then API should give sucessful response as "GBP" 
 	

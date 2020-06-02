@@ -57,7 +57,7 @@ public class stepDefination extends Utility {
 		// asserting the actual and expected value
 		Assert.assertEquals(expectedStatusCode, actualStatusCode);
 
-		System.out.println("Response : " + expectedStatusCode);
+		System.out.println("Response : " + actualStatusCode);
 	}
 
 	
@@ -87,7 +87,7 @@ public class stepDefination extends Utility {
 		bodyAsString = body.asString();
 
 		// asserting the actual and expected value
-		Assert.assertEquals(bodyAsString.contains(expectedErrorMessage), true);
+		Assert.assertEquals(bodyAsString.contains(expectedErrorMessage), false);
 	System.out.println(" Invalid Error message: " + expectedErrorMessage);
 	}
 
